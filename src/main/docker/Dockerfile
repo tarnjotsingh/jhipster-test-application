@@ -14,6 +14,7 @@ USER jhipster
 
 ENTRYPOINT ["./entrypoint.sh"]
 
+# Run on port 8080 by default
 EXPOSE 8080
 
 ADD *.war app.war
