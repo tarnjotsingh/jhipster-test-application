@@ -1,0 +1,26 @@
+{
+    "name": "Survey",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "survey",
+            "otherEntityName": "question",
+            "otherEntityRelationshipName": "survey"
+        }
+    ],
+    "changelogDate": "20181130192906",
+    "entityTableName": "survey",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

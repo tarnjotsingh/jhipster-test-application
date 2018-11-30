@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userQuestionChoice">
+            <h2><span>User Question Choice</span> {{userQuestionChoice.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Time Stamp</span></dt>
+                <dd>
+                    <span>{{userQuestionChoice.timeStamp}}</span>
+                </dd>
+                <dt><span>Question</span></dt>
+                <dd>
+                    <div *ngIf="userQuestionChoice.question">
+                        <a [routerLink]="['/question', userQuestionChoice.question?.id, 'view']">{{userQuestionChoice.question?.id}}</a>
+                    </div>
+                </dd>
+                <dt><span>Choice</span></dt>
+                <dd>
+                    <div *ngIf="userQuestionChoice.choice">
+                        <a [routerLink]="['/choice', userQuestionChoice.choice?.id, 'view']">{{userQuestionChoice.choice?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-question-choice', userQuestionChoice.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{
+    "name": "Question",
+    "fields": [
+        {
+            "fieldName": "question",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "question",
+            "otherEntityName": "choice",
+            "otherEntityRelationshipName": "question"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "survey",
+            "otherEntityName": "survey",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userQuestionChoice",
+            "otherEntityName": "userQuestionChoice",
+            "otherEntityRelationshipName": "question"
+        }
+    ],
+    "changelogDate": "20181130192905",
+    "entityTableName": "question",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

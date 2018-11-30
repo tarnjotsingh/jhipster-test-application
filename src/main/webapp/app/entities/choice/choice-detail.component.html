@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="choice">
+            <h2><span>Choice</span> {{choice.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Choice</span></dt>
+                <dd>
+                    <span>{{choice.choice}}</span>
+                </dd>
+                <dt><span>Weight</span></dt>
+                <dd>
+                    <span>{{choice.weight}}</span>
+                </dd>
+                <dt><span>Question</span></dt>
+                <dd>
+                    <div *ngIf="choice.question">
+                        <a [routerLink]="['/question', choice.question?.id, 'view']">{{choice.question?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/choice', choice.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

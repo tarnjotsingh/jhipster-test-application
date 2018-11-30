@@ -1,0 +1,32 @@
+{
+    "name": "UserQuestionChoice",
+    "fields": [
+        {
+            "fieldName": "timeStamp",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "question",
+            "otherEntityName": "question",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "choice",
+            "otherEntityName": "choice",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181130192903",
+    "entityTableName": "user_question_choice",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

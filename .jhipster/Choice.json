@@ -1,0 +1,36 @@
+{
+    "name": "Choice",
+    "fields": [
+        {
+            "fieldName": "choice",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "weight",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userQuestionChoice",
+            "otherEntityName": "userQuestionChoice",
+            "otherEntityRelationshipName": "choice"
+        },
+        {
+            "relationshipName": "question",
+            "otherEntityName": "question",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181130192904",
+    "entityTableName": "choice",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
