@@ -1,0 +1,28 @@
+entity UserQuestionChoice {
+	timeStamp Long
+}
+
+entity Choice {
+	choice String,
+    weight Integer
+}
+
+entity Question {
+	question String
+}
+
+entity Survey {
+	description String
+}
+
+
+
+relationship OneToMany {
+    Survey{survey} to Question{survey}
+	Question{question} to Choice
+}
+
+relationship ManyToOne {
+    UserQuestionChoice to Question
+    UserQuestionChoice to Choice
+}
